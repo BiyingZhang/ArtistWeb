@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="full-page">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <div v-if="$route.path == '/'" class="nav">
@@ -8,6 +8,10 @@
       <router-link to="/paintings">Paintings</router-link>
       <br>
       <router-link to="/sculpture">Sculpture</router-link>
+      <br>
+      <router-link to="/etching">Intaglio</router-link>
+      <!-- <br>
+      <router-link to="/Contact">contact</router-link> -->
     </div>
 
     <router-view></router-view>
@@ -33,8 +37,9 @@
   text-align: center;
   color: white;
   margin-top: 0px;
-  padding: 20px 20px;
   background-color: #01000E; 
+}
+.full-page{
   top: 0px;
   bottom: 0px;
   left: 0px;
@@ -42,6 +47,6 @@
   position: absolute;
 }
 .nav{
-  
+  padding: 20px 20px;  
 }
 </style>
