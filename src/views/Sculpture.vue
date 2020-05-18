@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Sculptures By Biying Zhang</h1>
+        <h1>Sculptures</h1>
         <div class="container">
             <div class="pic">
                 <img src="../assets/discoball1.jpg">
@@ -61,8 +61,9 @@ h1{
     margin-left: 5vw;
 }
 .container{
-    background-color: white;
-    color: black;
+    /* background-color: white; */
+    /* background-color: chocolate; */
+    /* color: black; */
     padding: 5vh 10vw;
     left:0;
     right:0;

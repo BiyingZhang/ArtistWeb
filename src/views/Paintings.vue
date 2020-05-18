@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Paintings By Biying Zhang</h1>
+        <h1>Paintings</h1>
         <div class="container">
             <div class="pic">
                 <img src="../assets/painting1.jpg">
@@ -58,7 +58,8 @@ h1{
     display:flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: black ;
+    /* background-color: black ; */
+    /* background-color: chocolate; */
 }
 .pic{
     width: 48%;

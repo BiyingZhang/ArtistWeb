@@ -18,21 +18,29 @@
     <transition  appear enter-active-class="animate__animated animate__backInUp delay" leave-active-class="animate__animated animate__backOutDown">
       <router-view></router-view>
     </transition>
+    <custom-cursor
+      :targets="['img', 'a', 'button', 'your-hover-class']"
+      :circleColor="'#fff'"
+      :circleColorHover="'#2f2f2f'"
+      :dotColor="'#2f2f2f'"
+      :dotColorHover="'lightgray'"
+      :hoverSize="1.8"
+    ></custom-cursor>
   </div>
 </template>
 
 <script>
-// import FullView from './components/FullView.vue'
-
+import CustomCursor from './components/CustomCursor.vue'
 export default {
   name: 'Home',
-  // components: {
-  //   FullView
-  // }
+  components: {
+    CustomCursor
+  }
 }
 </script>
 
 <style>
+* { cursor: none; }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -41,6 +49,7 @@ export default {
   color: white;
   margin-top: 0px;
   background-color: #01000E; 
+  /* background-color: cadetblue; */
 }
 
 #app a{

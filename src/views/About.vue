@@ -45,7 +45,6 @@ img {
  .about{
     margin: 5vh 10vw;
     text-align: left;
-    /* overflow: hidden; */
 }
 .container{
     display:flex;
