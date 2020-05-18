@@ -1,32 +1,35 @@
 <template>
   <div id="app" class="full-page">
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <div v-if="$route.path == '/'" class="nav">
-      <router-link to="/about">About</router-link>
-      <br>
-      <router-link to="/paintings">Paintings</router-link>
-      <br>
-      <router-link to="/sculpture">Sculpture</router-link>
-      <br>
-      <router-link to="/etching">Intaglio</router-link>
-      <!-- <br>
-      <router-link to="/Contact">contact</router-link> -->
-    </div>
+    <transition name="view" appear leave-active-class="animate__animated animate__flipOutX">
+      <div v-if="$route.path == '/'" class="nav">
+          <router-link to="/about"><font-awesome-icon :icon="['far', 'user']" size="lg" class="animate__animated animate__backInLeft animated__backOutRight"/></router-link>
+          <br><br>
+          <router-link to="/paintings"><font-awesome-icon icon="palette" size="lg" class="animate__animated animate__backInRight animated__backOutLeft"/></router-link>
+          <br><br>
+          <router-link to="/sculpture"><font-awesome-icon icon="dice-d20" size="lg" class="animate__animated animate__backInLeft animated__backOutRight"/></router-link>
+          <br><br>
+          <router-link to="/etching"><font-awesome-icon icon="fingerprint" size="lg" class="animate__animated animate__backInRight animated__backOutLeft"/></router-link>
+  
+        <!--<router-link to="/Contact">contact</router-link> -->
+        <!-- <FullView pic="box1.jpg"/> -->
+      </div>
+    </transition>
 
-    <router-view></router-view>
+    <transition  appear enter-active-class="animate__animated animate__backInUp delay" leave-active-class="animate__animated animate__backOutDown">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+// import FullView from './components/FullView.vue'
 
-// export default {
-//   name: 'Home',
-//   components: {
-//     HelloWorld
-//   }
-// }
+export default {
+  name: 'Home',
+  // components: {
+  //   FullView
+  // }
+}
 </script>
 
 <style>
@@ -39,14 +42,31 @@
   margin-top: 0px;
   background-color: #01000E; 
 }
-.full-page{
+
+#app a{
+  text-decoration: none;
+}
+#app a:visited {
+    color: white;
+}
+.full-page {
   top: 0px;
   bottom: 0px;
   left: 0px;
   right:0px;
   position: absolute;
+  overflow:  scroll;
 }
-.nav{
-  padding: 20px 20px;  
+#app::-webkit-scrollbar {
+  display: none;
+}
+.nav {
+  padding: 20px 20px;
+  position: absolute;
+  top: calc(50% - 90px); 
+  left: calc(50% - 30px); 
+}
+.delay {
+  animation-delay: 0.8s;
 }
 </style>
