@@ -1,58 +1,33 @@
 <template>
     <div>
+        <BackButton/>
         <h1>Sculptures</h1>
         <div class="container">
-            <div class="pic">
-                <img src="../assets/discoball1.jpg">
-                <p>Disco Balls, Plaster, 3" x 3", 2020</p>
-            </div>
-            <div class="pic">
-                <img src="../assets/discoball2.jpg">
-                <p>Disco Balls, Plaster, 3" x 3", 2020</p>
-            </div>
-            <div class="pic">
-                <img src="../assets/box1.jpg">
-                <p>Yun, CNC Cut Wood Board, 14" x 14", 2017</p>
-            </div>
-            <div class="pic">
-                <img src="../assets/box2.jpg">
-                <p>Yun, CNC Cut Wood Board, 14" x 14", 2017</p>
-            </div>
-            <div class="pic">
-                <img src="../assets/box3.jpg">
-                <p>Yun, CNC Cut Wood Board, 14" x 14", 2017</p>
-            </div>
-            <div class="pic">
-                <img src="../assets/wood1.jpg">
-                <p>Wood Arrangement 1, Wood Utensils, 2020</p>
-            </div>
-            <div class="pic">
-                <img src="../assets/wood2.jpg">
-                <p>Wood Arrangement 2, Wood Utensils, 2020</p>
-            </div>
-            <div class="pic">
-                <img src="../assets/wood3.jpg">
-                <p>Wood Arrangement 3, Wood Utensils, 2020</p>
-            </div>
-            <div class="pic">
-                <img src="../assets/wood4.jpg">
-                <p>Wood Arrangement 4, Wood Utensils, 2020</p>
-            </div>
+            <Picture name="discoball1" description='Disco Balls, Plaster, 3" x 3", 2020'/> 
+            <Picture name="discoball2" description='Disco Balls, Plaster, 3" x 3", 2020'/> 
+            <Picture name="box1" description='Yun, CNC Cut Wood Board, 14" x 14", 2017'/> 
+            <Picture name="box2" description='Yun, CNC Cut Wood Board, 14" x 14", 2017'/> 
+            <Picture name="box3" description='Yun, CNC Cut Wood Board, 14" x 14", 2017'/> 
+            <Picture name="wood1" description='Wood Arrangement 1, Wood Utensils, 2020'/> 
+            <Picture name="wood2" description='Wood Arrangement 2, Wood Utensils, 2020'/> 
+            <Picture name="wood3" description='Wood Arrangement 3, Wood Utensils, 2020'/> 
+            <Picture name="wood4" description='Wood Arrangement 4, Wood Utensils, 2020'/> 
         </div>
     </div>
 </template>
 
 <script>
+import BackButton from '../components/BackButton.vue'
+import Picture from '../components/Picture.vue'
 export default {
-  name: 'Sculpture'
+  name: 'Sculpture',
+  components: {
+      BackButton, Picture
+  }
 }
 </script>
 
 <style scoped>
-img {
-  max-width: 95%;
-  max-height: 95%;
-}
 p{
     margin: 5px;
 }
@@ -61,9 +36,6 @@ h1{
     margin-left: 5vw;
 }
 .container{
-    /* background-color: white; */
-    /* background-color: chocolate; */
-    /* color: black; */
     padding: 5vh 10vw;
     left:0;
     right:0;
@@ -73,9 +45,5 @@ h1{
     display:flex;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-.pic{
-    width: 48%;
-    padding-bottom: 4vh;
 }
 </style>

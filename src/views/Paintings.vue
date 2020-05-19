@@ -1,38 +1,26 @@
 <template>
-    <div>
+    <div id="paintngs">
+        <BackButton/>
         <h1>Paintings</h1>
         <div class="container">
-            <div class="pic">
-                <img src="../assets/painting1.jpg">
-                <p>Chess Board, Oil on canvas, 24" x 24", 2018</p>
-            </div>
-            <div class="pic">
-                <img src="../assets/painting2.jpg">
-                <p>Drown, Oil on canvas, 24" x 24", 2018</p>
-            </div>
-            <div class="pic">
-                <img src="../assets/acrylic1.jpg">
-                <p>Stick Figure 1, Acrylic On Paper, 8" x 12", 2018</p>
-            </div>
-            <div class="pic">
-                <img src="../assets/acrylic2.jpg">
-                <p>Stick Figure 2, Acrylic On Paper, 8" x 12", 2018</p>
-            </div>
-            <div class="pic">
-                <img src="../assets/painting3.jpg">
-                <p>Odd Circuit, Oil on canvas, 18" x 24", 2018</p>
-            </div>
-            <div class="pic">
-                <img src="../assets/painting4.jpg">
-                <p>Wrap Me Up, Oil on canvas, tinsel foil fringe, 24" x 30", 2018</p>
-            </div>
+            <Picture name="painting1" description='Chess Board, Oil on canvas, 24" x 24", 2018'/> 
+            <Picture name="painting2" description='Drown, Oil on canvas, 24" x 24", 2018'/> 
+            <Picture name="acrylic1" description='Stick Figure 1, Acrylic On Paper, 8" x 12", 2018'/> 
+            <Picture name="acrylic2" description='Stick Figure 2, Acrylic On Paper, 8" x 12", 2018'/> 
+            <Picture name="painting3" description='Odd Circuit, Oil on canvas, 18" x 24", 2018'/> 
+            <Picture name="painting4" description='Wrap Me Up, Oil on canvas, tinsel foil fringe, 24" x 30", 2018'/> 
         </div>
     </div>
 </template>
 
 <script>
+import BackButton from '../components/BackButton.vue'
+import Picture from '../components/Picture.vue'
 export default {
-  name: 'Paintings'
+  name: 'Paintings',
+  components: {
+      BackButton, Picture
+  }
 }
 </script>
 
@@ -48,6 +36,9 @@ h1{
     text-align: left;
     margin-left: 5vw;
 }
+.delay {
+  animation-delay: 0.8s;
+}
 .container{
     padding: 5vh 10vw;
     left:0;
@@ -58,11 +49,5 @@ h1{
     display:flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* background-color: black ; */
-    /* background-color: chocolate; */
-}
-.pic{
-    width: 48%;
-    padding-bottom: 8vh;
 }
 </style>

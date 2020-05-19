@@ -1,10 +1,9 @@
 <template>
     <div class="about">
+        <BackButton/>
         <h1>Everything You Need to Know About Biying Zhang</h1>
-        
         <div class="container">
             <div class="intro">
-                <router-link to="/">home</router-link>
                 <p>{{info_p1}}</p>
                 <p>{{info_p2}}</p>
                 <p>{{info_p3}}</p>
@@ -23,8 +22,13 @@
 </template>
 
 <script>
+import BackButton from '../components/BackButton.vue'
+
 export default {
   name: 'About',
+  components: {
+      BackButton
+  },
   data() {
 		return {
             info_p1: "Biying (pronounced bee-yeen) Zhang is a mixed media artist who currently lives in Pittsburgh, PA. She grew up in Beijing, China and moved to the U.S. when she was 15.",

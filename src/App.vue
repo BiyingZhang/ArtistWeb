@@ -9,15 +9,15 @@
           <router-link to="/sculpture"><font-awesome-icon icon="dice-d20" size="lg" class="animate__animated animate__backInLeft animated__backOutRight"/></router-link>
           <br><br>
           <router-link to="/etching"><font-awesome-icon icon="fingerprint" size="lg" class="animate__animated animate__backInRight animated__backOutLeft"/></router-link>
-  
         <!--<router-link to="/Contact">contact</router-link> -->
         <!-- <FullView pic="box1.jpg"/> -->
       </div>
     </transition>
 
-    <transition  appear enter-active-class="animate__animated animate__backInUp delay" leave-active-class="animate__animated animate__backOutDown">
+    <!-- <transition  appear enter-active-class="animate__animated animate__backInUp delay" leave-active-class="animate__animated animate__backOutDown"> -->
+    <!-- <transition  appear enter-active-class="animate__animated animate__backInUp delay"> -->
       <router-view></router-view>
-    </transition>
+    <!-- </transition> -->
     <custom-cursor
       :targets="['img', 'a', 'button', 'your-hover-class']"
       :circleColor="'#fff'"
@@ -31,6 +31,7 @@
 
 <script>
 import CustomCursor from './components/CustomCursor.vue'
+
 export default {
   name: 'Home',
   components: {
