@@ -1,16 +1,20 @@
 <template>
-    <div id="paintngs">
-        <BackButton/>
-        <h1>Paintings</h1>
-        <div class="container">
-            <Picture name="painting1" description='Chess Board, Oil on canvas, 24" x 24", 2018'/> 
-            <Picture name="painting2" description='Drown, Oil on canvas, 24" x 24", 2018'/> 
-            <Picture name="acrylic1" description='Stick Figure 1, Acrylic On Paper, 8" x 12", 2018'/> 
-            <Picture name="acrylic2" description='Stick Figure 2, Acrylic On Paper, 8" x 12", 2018'/> 
-            <Picture name="painting3" description='Odd Circuit, Oil on canvas, 18" x 24", 2018'/> 
-            <Picture name="painting4" description='Wrap Me Up, Oil on canvas, tinsel foil fringe, 24" x 30", 2018'/> 
+    <transition leave-active-class="animate__animated animate__fadeOut">
+        <div id="paintngs">
+            <BackButton/>
+            <transition appear enter-active-class="animate__animated animate__fadeIn delay">
+                <h1>Paintings</h1>
+            </transition>
+            <div class="container">
+                <Picture name="painting1" description='Chess Board, Oil on canvas, 24" x 24", 2018'/> 
+                <Picture name="painting2" description='Drown, Oil on canvas, 24" x 24", 2018'/> 
+                <Picture name="acrylic1" description='Stick Figure 1, Acrylic On Paper, 8" x 12", 2018'/> 
+                <Picture name="acrylic2" description='Stick Figure 2, Acrylic On Paper, 8" x 12", 2018'/> 
+                <Picture name="painting3" description='Odd Circuit, Oil on canvas, 18" x 24", 2018'/> 
+                <Picture name="painting4" description='Wrap Me Up, Oil on canvas, tinsel foil fringe, 24" x 30", 2018'/> 
+            </div>
         </div>
-    </div>
+    </transition>
 </template>
 
 <script>
@@ -25,7 +29,7 @@ export default {
 </script>
 
 <style scoped>
- img {
+img {
   max-width: 95%;
   max-height: 95%;
 }

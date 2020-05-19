@@ -2,13 +2,13 @@
   <div id="app" class="full-page">
     <transition name="view" appear leave-active-class="animate__animated animate__flipOutX">
       <div v-if="$route.path == '/'" class="nav">
-          <router-link to="/about"><font-awesome-icon :icon="['far', 'user']" size="lg" class="animate__animated animate__backInLeft animated__backOutRight"/></router-link>
+          <router-link to="/about"><font-awesome-icon :icon="['far', 'user']" size="lg" class="animate__animated animate__backInLeft animated__backOutRight delay"/></router-link>
           <br><br>
-          <router-link to="/paintings"><font-awesome-icon icon="palette" size="lg" class="animate__animated animate__backInRight animated__backOutLeft"/></router-link>
+          <router-link to="/paintings"><font-awesome-icon icon="palette" size="lg" class="animate__animated animate__backInRight animated__backOutLeft delay"/></router-link>
           <br><br>
-          <router-link to="/sculpture"><font-awesome-icon icon="dice-d20" size="lg" class="animate__animated animate__backInLeft animated__backOutRight"/></router-link>
+          <router-link to="/sculpture"><font-awesome-icon icon="dice-d20" size="lg" class="animate__animated animate__backInLeft animated__backOutRight delay"/></router-link>
           <br><br>
-          <router-link to="/etching"><font-awesome-icon icon="fingerprint" size="lg" class="animate__animated animate__backInRight animated__backOutLeft"/></router-link>
+          <router-link to="/etching"><font-awesome-icon icon="fingerprint" size="lg" class="animate__animated animate__backInRight animated__backOutLeft delay"/></router-link>
         <!--<router-link to="/Contact">contact</router-link> -->
         <!-- <FullView pic="box1.jpg"/> -->
       </div>
@@ -50,7 +50,6 @@ export default {
   color: white;
   margin-top: 0px;
   background-color: #01000E; 
-  /* background-color: cadetblue; */
 }
 
 #app a{

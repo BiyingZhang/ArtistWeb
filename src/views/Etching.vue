@@ -1,15 +1,19 @@
 <template>
-    <div>
-        <BackButton/>
-        <h1>Intaglio Prints</h1>
-        <div class="container">
-            <Picture name="circuit1" description='Circuit Collection Arrangement 1, Etching, 10" x 10", 2017'/> 
-            <Picture name="circuit2" description='Circuit Collection Arrangement 2, Etching, 10" x 10", 2017'/> 
-            <Picture name="circuit3" description='Circuit Collection Arrangement 3, Etching, 10" x 10", 2017'/> 
-            <Picture name="circuit4" description='Circuit Collection Arrangement 4, Etching, 10" x 10", 2017'/> 
-            <Picture name="etching" description='Bad Apple, Etching, 3" x 3", 2017'/> 
+    <transition leave-active-class="animate__animated animate__fadeOut">
+        <div>
+            <BackButton/>
+            <transition appear enter-active-class="animate__animated animate__fadeIn delay">
+                <h1>Intaglio Prints</h1>
+            </transition>
+            <div class="container">
+                <Picture name="circuit1" description='Circuit Collection Arrangement 1, Etching, 10" x 10", 2017'/> 
+                <Picture name="circuit2" description='Circuit Collection Arrangement 2, Etching, 10" x 10", 2017'/> 
+                <Picture name="circuit3" description='Circuit Collection Arrangement 3, Etching, 10" x 10", 2017'/> 
+                <Picture name="circuit4" description='Circuit Collection Arrangement 4, Etching, 10" x 10", 2017'/> 
+                <Picture name="etching" description='Bad Apple, Etching, 3" x 3", 2017'/> 
+            </div>
         </div>
-    </div>
+    </transition>
 </template>
 
 <script>

@@ -1,19 +1,23 @@
 <template>
-    <div>
-        <BackButton/>
-        <h1>Sculptures</h1>
-        <div class="container">
-            <Picture name="discoball1" description='Disco Balls, Plaster, 3" x 3", 2020'/> 
-            <Picture name="discoball2" description='Disco Balls, Plaster, 3" x 3", 2020'/> 
-            <Picture name="box1" description='Yun, CNC Cut Wood Board, 14" x 14", 2017'/> 
-            <Picture name="box2" description='Yun, CNC Cut Wood Board, 14" x 14", 2017'/> 
-            <Picture name="box3" description='Yun, CNC Cut Wood Board, 14" x 14", 2017'/> 
-            <Picture name="wood1" description='Wood Arrangement 1, Wood Utensils, 2020'/> 
-            <Picture name="wood2" description='Wood Arrangement 2, Wood Utensils, 2020'/> 
-            <Picture name="wood3" description='Wood Arrangement 3, Wood Utensils, 2020'/> 
-            <Picture name="wood4" description='Wood Arrangement 4, Wood Utensils, 2020'/> 
+    <transition leave-active-class="animate__animated animate__fadeOut">
+        <div>
+            <BackButton/>
+            <transition appear enter-active-class="animate__animated animate__fadeIn delay">
+                <h1>Sculptures</h1>
+            </transition>
+            <div class="container">
+                <Picture name="discoball1" description='Disco Balls, Plaster, 3" x 3", 2020'/> 
+                <Picture name="discoball2" description='Disco Balls, Plaster, 3" x 3", 2020'/> 
+                <Picture name="box1" description='Yun, CNC Cut Wood Board, 14" x 14", 2017'/> 
+                <Picture name="box2" description='Yun, CNC Cut Wood Board, 14" x 14", 2017'/> 
+                <Picture name="box3" description='Yun, CNC Cut Wood Board, 14" x 14", 2017'/> 
+                <Picture name="wood1" description='Wood Arrangement 1, Wood Utensils, 2020'/> 
+                <Picture name="wood2" description='Wood Arrangement 2, Wood Utensils, 2020'/> 
+                <Picture name="wood3" description='Wood Arrangement 3, Wood Utensils, 2020'/> 
+                <Picture name="wood4" description='Wood Arrangement 4, Wood Utensils, 2020'/> 
+            </div>
         </div>
-    </div>
+    </transition>
 </template>
 
 <script>
@@ -45,5 +49,8 @@ h1{
     display:flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+.delay{
+    animation-delay: 0.8s;
 }
 </style>
